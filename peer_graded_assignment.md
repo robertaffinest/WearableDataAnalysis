@@ -1,7 +1,5 @@
 **Peer-graded Assignment: Getting and Cleaning Data Course Project**
 
-DeadlineOct 14, 11:59 PM CEST
-
 **Ready for the assignment?**
 
 You will find instructions below to submit.
