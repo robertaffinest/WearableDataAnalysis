@@ -1,31 +1,13 @@
-# Utility function to check, install, and load a package -----------------------
-loadPackage <- function(pkg) {
-  if (!require(pkg, character.only = TRUE)) {
-    tryCatch({
-      install.packages(pkg)  # Install the package
-      library(pkg, character.only = TRUE)  # Load the package
-      message("Successfully installed and loaded: ", pkg)
-    }, error = function(e) {
-      message("Error installing package: ", pkg)
-      message("Error message: ", e$message)
-    })
-  }
-}
+# According to the Peer-graded Assignment of the "Getting and Cleaning Data Course Project",
+# this R script, run_analysis.R, performs the following tasks:
+# 1.	Merges the training and the test sets to create one data set.
+# 2.	Extracts only the measurements on the mean and standard deviation for each measurement. 
+# 3.	Uses descriptive activity names to name the activities in the data set
+# 4.	Appropriately labels the data set with descriptive variable names. 
+# 5.	From the data set in step 4, creates a second, independent tidy data set
+#     with the average of each variable for each activity and each subject.
 
-# Utility function to download and unzip a file --------------------------------
-downloadAndUnzip <- function(url, dest_file) {
-  tryCatch({
-    download.file(url, dest_file)  # Download the file
-    message("File downloaded successfully.")
-    unzip(dest_file)  # Unzip the downloaded file
-    message("File unzipped successfully.")
-  }, error = function(e) {
-    message("Error in downloading/unzipping: ", e$message)
-    stop("Exiting due to download/unzip failure.")
-  })
-}
-
-# Utility function to load data ------------------------------------------------
+# Utility function to load data 
 loadData <- function(data_path, activity_path, subject_path, features_needed, feature_names) {
   data <- fread(data_path)[, features_needed, with = FALSE]  # Load measurements
   activity <- fread(activity_path, col.names = "activity")  # Load activities
@@ -34,8 +16,8 @@ loadData <- function(data_path, activity_path, subject_path, features_needed, fe
   return(cbind(activity, subject, data))  # Combine and return data
 }
 
-# Set up environment -----------------------------------------------------------
-loadPackage("data.table")
+# Set up environment 
+library("data.table")
 path <- getwd()  # Get current working directory
 url <- paste0("https://d396qusza40orc.cloudfront.net/",
               "getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip")
