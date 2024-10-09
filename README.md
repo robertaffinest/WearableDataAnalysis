@@ -1,6 +1,6 @@
-# Human Activity Recognition Using Smartphone Data
+## Peer-graded Assignment: Getting and Cleaning Data Course Project
 
-This project aims to demonstrate the ability to collect, clean, and analyze a dataset derived from accelerometer data collected by the Samsung Galaxy S smartphone. The goal is to create a tidy dataset that can be used for further analysis and insights into human activities.
+The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The dataset is derived from accelerometer data collected by the Samsung Galaxy S smartphone. The goal is to create a tidy dataset that can be used for further analysis and insights into human activities.
 
 ## Repository Contents
 
