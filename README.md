@@ -15,6 +15,7 @@ The original dataset can be accessed here: https://d396qusza40orc.cloudfront.net
 
 ## Files in This Repository
 
+- `README.md`: This file, which explains the project, the dataset, and how to run the analysis.
 - `run_analysis.R`: The R script that processes the data and creates a tidy dataset.
 - `CodeBook.md`: A codebook that describes the variables, data, and transformations performed to clean the dataset.
 - `tidydataset.txt`: The final tidy dataset output file, which contains the average of each variable for each activity and each subject.
@@ -24,8 +25,8 @@ The original dataset can be accessed here: https://d396qusza40orc.cloudfront.net
 1. Clone this repository to your local machine.
 
 2. Download the dataset:
-   - The `run_analysis.R` script automatically downloads and unzips the dataset from the [UCI HAR Dataset](https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
-   - Alternatively, you can manually download the dataset from [this link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and place it in the working directory.
+   - The `run_analysis.R` script automatically downloads and unzips the dataset.
+   - Alternatively, you can manually download the dataset from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and place it in the working directory.
 
 3. Run the `run_analysis.R` script to generate the final tidy dataset:
    ```r
@@ -62,9 +63,9 @@ final_data <- read.table("tidydataset.txt", header = TRUE)
 WearableDataAnalysis/
 │
 ├── CodeBook.md              # Detailed description of the variables and data transformations
-├── tidydataset.txt         # The final tidy dataset
+├── tidydataset.txt          # The final tidy dataset
 ├── README.md                # This file
-└── run_analysis.R           # R script to clean and process the data
+└── run_analysis.R           # R script to process the data
 ```
 
 ## Acknowledgments
