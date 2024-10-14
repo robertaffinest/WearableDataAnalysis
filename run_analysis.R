@@ -69,4 +69,4 @@ setnames(merged_data, c("subject", "activity", feature_names))
 final_data <- merged_data[, lapply(.SD, mean), by = .(subject, activity)]
 
 # Step 5: Write the final tidy data set to a file
-fwrite(final_data, "tidydataset.txt", row.names = FALSE)
+write.table(final_data, "tidydataset.txt", row.names = FALSE)
